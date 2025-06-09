@@ -214,7 +214,7 @@ spec:
       - name: ociArtifactExpiresAfter
         value: $(params.image-expires-after)
       runAfter:
-      - clone-repository
+      - run-opm-command
       taskRef:
         params:
         - name: name
@@ -262,7 +262,7 @@ spec:
       - name: IMAGE_APPEND_PLATFORM
         value: "true"
       runAfter:
-      - clone-repository
+      - prefetch-dependencies
       taskRef:
         params:
         - name: name
