@@ -95,9 +95,6 @@ spec:
     - description: Arguments for opm command
       name: opm_args
       default: ["alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "json", ">", "v4.13/catalog.yml"]
-    - description: Ouput path for opm command
-      name: opm_output_path
-      default: "v4.13/catalog.yml"
     - default: "false"
       description: Build a source image.
       name: build-source-image
@@ -191,7 +188,7 @@ spec:
       - name: OPM_ARGS
         value: $(params.opm_args)
       - name: OPM_OUTPUT_PATH
-        value: $(params.opm_output_path)
+        value: "v4.13/catalog.yml"
       runAfter:
       - clone-repository
       taskRef:
