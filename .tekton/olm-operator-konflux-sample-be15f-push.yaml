@@ -187,8 +187,6 @@ spec:
         value: $(params.image-expires-after)
       - name: OPM_ARGS
         value: $(params.opm_args)
-      - name: OPM_OUTPUT_PATH
-        value: "v4.13/catalog.yml"
       runAfter:
       - clone-repository
       taskRef:
