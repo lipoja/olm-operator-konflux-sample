@@ -94,7 +94,10 @@ spec:
       name: image-expires-after
     - description: Arguments for opm command
       name: opm_args
-      default: ["alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "json", ">", "v4.13/catalog.yml"]
+      value: ["alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "json", ">", "v4.13/catalog.yml"]
+    - description: Ouput path for opm command
+      name: opm_output_path
+      value: "v4.13/catalog.yml"
     - default: "false"
       description: Build a source image.
       name: build-source-image
@@ -187,6 +190,8 @@ spec:
         value: $(params.image-expires-after)
       - name: OPM_ARGS
         value: $(params.opm_args)
+      - name: OPM_OUTPUT_PATH
+        value: $(params.opm_output_path)
       runAfter:
       - clone-repository
       taskRef:
