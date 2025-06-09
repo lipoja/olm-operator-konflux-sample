@@ -92,9 +92,6 @@ spec:
       description: Image tag expiration time, time values could be something like
         1h, 2d, 3w for hours, days, and weeks, respectively.
       name: image-expires-after
-    - description: Arguments for opm command
-      name: opm_args
-      default: []
     - default: "false"
       description: Build a source image.
       name: build-source-image
@@ -186,7 +183,7 @@ spec:
         - name: ociArtifactExpiresAfter
           value: $(params.image-expires-after)
         - name: OPM_ARGS
-          value: $(params.opm_args)
+          value: [ "alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "yaml" ]
       runAfter:
         - clone-repository
       taskRef:
