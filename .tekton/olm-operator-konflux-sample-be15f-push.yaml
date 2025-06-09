@@ -94,10 +94,10 @@ spec:
       name: image-expires-after
     - description: Arguments for opm command
       name: opm_args
-      value: ["alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "json", ">", "v4.13/catalog.yml"]
+      default: ["alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "json", ">", "v4.13/catalog.yml"]
     - description: Ouput path for opm command
       name: opm_output_path
-      value: "v4.13/catalog.yml"
+      default: "v4.13/catalog.yml"
     - default: "false"
       description: Build a source image.
       name: build-source-image
