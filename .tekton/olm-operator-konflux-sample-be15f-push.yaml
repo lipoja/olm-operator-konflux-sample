@@ -185,7 +185,7 @@ spec:
         - name: OPM_ARGS
           value: [ "alpha", "render-template", "basic", "v4.13/catalog-template.json", "-o", "yaml" ]
         - name: OPM_OUTPUT_PATH
-          value: "catalog/gatekeeper-operator/catalog.yml"
+          value: "v4.13/catalog/gatekeeper-operator/catalog.yml"
       runAfter:
         - clone-repository
       taskRef:
