@@ -1,0 +1,10 @@
+---
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageDigestMirrorSet
+metadata:
+  name: cnv-mirrorset
+spec:
+  imageDigestMirrors:
+  - mirrors:
+    - example.com/openshift4/ose-kube-rbac-proxy-rhel9
+    source: registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9
