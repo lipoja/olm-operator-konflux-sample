@@ -186,8 +186,8 @@ spec:
           value: [ "alpha", "render-template", "basic", "v4.13/catalog-template.json"]
         - name: OPM_OUTPUT_PATH
           value: "v4.13/catalog/gatekeeper-operator/catalog.json"
-#        - name: IMDS_PATH
-#          value: ".tekton/images-mirror-set.yaml"
+        - name: IMDS_PATH
+          value: ".tekton/images-mirror-set.yaml"
       runAfter:
         - clone-repository
       taskRef:
@@ -195,7 +195,7 @@ spec:
           - name: url
             value: https://github.com/lipoja/build-definitions.git
           - name: revision
-            value: main
+            value: run_opm_command
           - name: pathInRepo
             value: task/run-opm-command-oci-ta/0.1/run-opm-command-oci-ta.yaml
         resolver: git
