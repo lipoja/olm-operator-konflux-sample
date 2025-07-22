@@ -183,7 +183,7 @@ spec:
         - name: ociArtifactExpiresAfter
           value: $(params.image-expires-after)
         - name: OPM_ARGS
-          value: []
+          value: ["version"]
         - name: OPM_OUTPUT_PATH
           value: "asd.txt"
         - name: IDMS_PATH
