@@ -185,7 +185,7 @@ spec:
         - name: OPM_ARGS
           value: []
         - name: OPM_OUTPUT_PATH
-          value: ""
+          value: "asd.txt"
         - name: IDMS_PATH
           value: ""
       runAfter:
