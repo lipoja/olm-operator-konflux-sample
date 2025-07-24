@@ -195,7 +195,7 @@ spec:
           - name: url
             value: https://github.com/lipoja/build-definitions.git
           - name: revision
-            value: run_opm_command
+            value: run_opm_command_2
           - name: pathInRepo
             value: task/run-opm-command-oci-ta/0.1/run-opm-command-oci-ta.yaml
         resolver: git
