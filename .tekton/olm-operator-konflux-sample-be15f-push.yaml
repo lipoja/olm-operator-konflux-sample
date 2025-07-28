@@ -186,8 +186,7 @@ spec:
           value: ["alpha", "render-template", "basic", "v4.13/catalog-template.json"]
         - name: OPM_OUTPUT_PATH
           value: "v4.13/catalog/gatekeeper-operator/catalog.json"
-        - name: IDMS_PATH
-          value: ".tekton/images-mirror-set.yaml"
+
       runAfter:
         - clone-repository
       taskRef:
