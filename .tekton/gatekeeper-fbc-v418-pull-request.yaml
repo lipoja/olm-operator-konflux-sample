@@ -199,15 +199,15 @@ spec:
           value: ".tekton/images-mirror-set.yaml"
       runAfter:
         - clone-repository
-      taskRef: # TODO - fix taskRef once realeased
+      taskRef:
         params:
-          - name: url
-            value: https://github.com/lipoja/build-definitions.git
-          - name: revision
-            value: run_opm_command
-          - name: pathInRepo
-            value: task/run-opm-command-oci-ta/0.1/run-opm-command-oci-ta.yaml
-        resolver: git
+          - name: name
+            value: run-opm-command-oci-ta
+          - name: bundle
+            value: quay.io/konflux-ci/tekton-catalog/task-run-opm-command-oci-ta:0.1@sha256:14ff1a3b59655326d178ac29323f064e11d51912155b83cdfb3eee0dc75462a9
+          - name: kind
+            value: task
+        resolver: bundles
     - name: prefetch-dependencies
       params:
       - name: input
