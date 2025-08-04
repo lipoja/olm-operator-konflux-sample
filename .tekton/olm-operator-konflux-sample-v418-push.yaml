@@ -185,11 +185,16 @@ spec:
       - name: ociArtifactExpiresAfter
         value: $(params.image-expires-after)
       - name: OPM_ARGS
-        value: []
+        value:
+          - alpha
+          - render-template
+          - basic
+          - "v4.18/catalog-template.json"
+          - "--migrate-level=bundle-object-to-csv-metadata"
       - name: OPM_OUTPUT_PATH
-        value: ""
+        value: "v4.18/catalog/gatekeeper-operator/catalog.json"
       - name: IDMS_PATH
-        value: ""
+        value: ".tekton/images-mirror-set.yaml"
       runAfter:
       - clone-repository
       taskRef:
