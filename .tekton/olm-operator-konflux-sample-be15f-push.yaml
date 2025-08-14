@@ -188,8 +188,6 @@ spec:
           value: "v4.13/catalog/gatekeeper-operator/catalog.json"
         - name: IDMS_PATH
           value: ".tekton/images-mirror-set.yaml"
-        - name: FILE_TO_UPDATE_PULLSPEC
-          value: "v4.13/catalog-template.json"
       runAfter:
         - clone-repository
       taskRef:
