@@ -186,6 +186,8 @@ spec:
           value: ["alpha", "render-template", "basic", "v4.13/catalog-template.json"]
         - name: OPM_OUTPUT_PATH
           value: "v4.13/catalog/gatekeeper-operator/catalog.json"
+        - name: FILE_TO_UPDATE_PULLSPEC
+          value: "v4.13/catalog-template.json"
       runAfter:
         - clone-repository
       taskRef:
