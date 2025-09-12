@@ -7,5 +7,7 @@ spec:
   imageDigestMirrors:
   - mirrors:
     - quay.io/gatekeeper/gatekeeper-operator-bundle
+    - gcr.io/kubebuilder/kube-rbac-proxy
     - quay.io/redhat-user-workloads/konflux-samples-tenant/olm-operator/gatekeeper-operator-bundle
     source: replaced-with-source-example.com
+
